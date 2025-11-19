@@ -254,7 +254,55 @@ function renderStart() {
         </button>
       </div>
       <div class="hidden md:block">
-        <img src="https://www.genspark.ai/api/files/s/wmOEq2Et" alt="خطوتك الأولى نحو مستقبل مشرق" class="rounded-lg" />
+        <div class="relative bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-2xl p-8 shadow-xl border-2 border-purple-200 overflow-hidden">
+          <!-- خلفية زخرفية -->
+          <div class="absolute top-0 right-0 w-40 h-40 bg-purple-200 rounded-full opacity-20 -mr-20 -mt-20"></div>
+          <div class="absolute bottom-0 left-0 w-32 h-32 bg-pink-200 rounded-full opacity-20 -ml-16 -mb-16"></div>
+          
+          <!-- المحتوى -->
+          <div class="relative z-10 text-center space-y-6">
+            <!-- أيقونة الهدف -->
+            <div class="flex justify-center">
+              <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full p-6 shadow-lg">
+                <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <!-- العنوان الرئيسي -->
+            <h3 class="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 leading-tight">
+              خطوتك الأولى
+            </h3>
+            
+            <!-- النص الوصفي -->
+            <p class="text-lg font-semibold text-gray-700 leading-relaxed px-4">
+              نحو اكتشاف ميولك المهنية<br>ومسارك التخصصي
+            </p>
+            
+            <!-- أيقونات توضيحية -->
+            <div class="flex justify-center gap-4 pt-4">
+              <div class="text-center">
+                <div class="bg-white rounded-full p-3 shadow-md mb-2">
+                  <span class="text-2xl">🎯</span>
+                </div>
+                <p class="text-xs text-gray-600">اكتشف</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white rounded-full p-3 shadow-md mb-2">
+                  <span class="text-2xl">📊</span>
+                </div>
+                <p class="text-xs text-gray-600">حلل</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white rounded-full p-3 shadow-md mb-2">
+                  <span class="text-2xl">🚀</span>
+                </div>
+                <p class="text-xs text-gray-600">انطلق</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex justify-center gap-8 mt-6 text-gray-500 py-4">
