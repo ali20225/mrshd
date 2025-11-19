@@ -1,0 +1,36 @@
+{
+  "name": "career-guide",
+  "version": "1.0.0",
+  "description": "تطبيق تفاعلي لاكتشاف الميول المهنية والمواهب - Career Guide Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000 -o",
+    "dev": "npx http-server -p 3000 -c-1",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/career-guide.git"
+  },
+  "keywords": [
+    "career",
+    "guidance",
+    "vocational",
+    "education",
+    "arabic",
+    "rtl",
+    "assessment",
+    "career-counseling",
+    "student-guidance",
+    "majors",
+    "university"
+  ],
+  "author": "Dr. Abdulghani Al-Naqeeb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/career-guide/issues"
+  },
+  "homepage": "https://github.com/your-username/career-guide#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
