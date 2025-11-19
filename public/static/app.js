@@ -408,12 +408,6 @@ function renderReport() {
           </div>
         </div>
 
-        <div class="mb-8 p-6 bg-purple-50 rounded-lg border-2 border-dashed border-purple-200 text-center report-section">
-          <h3 class="text-xl font-bold text-gray-800 mb-2">🚀 قفزة نحو المستقبل</h3>
-          <p class="text-gray-600 mb-4">تحليل موجز يجمع بين ميولك ومواهبك بناءً على إجاباتك.</p>
-          <div id="analysis-box" class="text-right space-y-3 bg-white border rounded-lg p-4"></div>
-        </div>
-
         <div class="mt-6 p-4 bg-blue-50 border-r-4 border-blue-400 text-blue-800 rounded report-section">
           <h4 class="font-bold">ملاحظة هامة:</h4>
           <p>هذا التقرير هو نقطة بداية إرشادية. قرار اختيار التخصص يعتمد أيضاً على قدراتك الدراسية، الفرص المتاحة، وسوق العمل.</p>
@@ -503,8 +497,6 @@ function attachEvents() {
     document.querySelectorAll('.btn-mini.about').forEach(b => b.addEventListener('click', () => showModal('نبذة عن التخصص', aboutMajor(b.dataset.major))));
     document.querySelectorAll('.btn-mini.paths').forEach(b => b.addEventListener('click', () => showModal('مسارات وظيفية', listCareers(b.dataset.major))));
     document.querySelectorAll('.btn-mini.skills').forEach(b => b.addEventListener('click', () => showModal('كيف أستعد؟', listSkills(b.dataset.major))));
-
-    buildAnalysis();
   }
 }
 
@@ -545,48 +537,6 @@ function nextQuestion() {
     state.screen = 'report';
     render();
   }
-}
-
-function buildAnalysis() {
-  const box = document.getElementById('analysis-box');
-  const { hollandScores, talentScores } = state.reportData;
-  const i1 = AppData.interests[hollandScores[0][0]].title;
-  const i2 = AppData.interests[hollandScores[1][0]].title;
-  const t1 = AppData.talents[talentScores[0][0]].title;
-  const t2 = talentScores[1] ? AppData.talents[talentScores[1][0]].title : null;
-
-  const strengths = [
-    `${i1} يمنحك دافعًا واضحًا نحو أنشطة متسقة مع قيمك الشخصية.`,
-    `${i2} يدعم قدرتك على اتخاذ قرارات مناسبة لمسارك المستقبلي.`,
-    `${t1} يظهر كموهبة محورية يمكنك البناء عليها في التعلم والإنجاز.`
-  ];
-  if (t2) strengths.push(`${t2} يكمّل شخصيتك ويزيد من تنوع خياراتك.`);
-
-  const env = `بيئة عمل تحترم ${i1} و${i2} مع فرص لتفعيل ${t1}${t2 ? (' و' + t2) : ''} ستكون الأنسب لك.`;
-  const advice = 'اختر مقررات ومشاريع مدرسية تعزز مواهبك، واطلب تجارب تطبيقية قصيرة لتجربة التخصصات قبل القرار.';
-
-  box.innerHTML = `
-    <div class="grid md:grid-cols-2 gap-4 text-center">
-      <div class="p-4 bg-white rounded-lg border md:col-span-2">
-        <div class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-[var(--brand-2)] mb-3">${AppData.icons.profile}</div>
-        <h4 class="text-xl font-bold text-gray-800">ملفك المختصر</h4>
-      </div>
-      <div class="p-4 bg-white rounded-lg border">
-        <div class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-[var(--brand-2)] mb-3">${AppData.icons.strengths}</div>
-        <h4 class="text-lg font-bold text-gray-800 mb-3">أبرز نقاط قوتك</h4>
-        <ul class="text-right text-gray-600 list-disc pr-5">${strengths.map(s => `<li class="py-1">${s}</li>`).join('')}</ul>
-      </div>
-      <div class="p-4 bg-white rounded-lg border">
-        <div class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-[var(--brand-2)] mb-3">${AppData.icons.environment}</div>
-        <h4 class="text-lg font-bold text-gray-800 mb-3">بيئة العمل المثالية</h4>
-        <p class="text-gray-600">${env}</p>
-      </div>
-      <div class="p-4 bg-white rounded-lg border md:col-span-2">
-        <div class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-[var(--brand-2)] mb-3">${AppData.icons.advice}</div>
-        <h4 class="text-lg font-bold text-gray-800 mb-3">نصيحة أخيرة</h4>
-        <p class="text-gray-600">${advice}</p>
-      </div>
-    </div>`;
 }
 
 function aboutMajor(major) {
