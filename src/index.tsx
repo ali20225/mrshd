@@ -34,7 +34,10 @@ app.get('/', (c) => {
   <div id="app" class="container mx-auto p-4 md:p-6 max-w-6xl"></div>
 
   <footer class="text-center py-6 text-sm text-gray-500">
-    <p>بإشراف المرشد المهني: د. عبدالغني النقيب</p>
+    <div class="flex flex-col items-center gap-3 mb-3">
+      <img src="https://www.genspark.ai/api/files/s/QmMkiuuw" alt="شعار مدارس النبلاء" class="h-12 object-contain" />
+      <p>تصميم المرشد المهني: د. عبدالغني النقيب</p>
+    </div>
     <button id="toggle-admin" class="text-xs text-gray-400 hover:text-gray-600 mt-2 no-print">عرض لوحة التحكم</button>
   </footer>
 
