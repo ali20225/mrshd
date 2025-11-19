@@ -1,0 +1,55 @@
+# GitHub Pages Configuration
+title: "مرشدك المهني - Career Guide"
+description: "نظام تفاعلي شامل لاكتشاف الميول المهنية والمواهب"
+author: "د. عبدالغني النقيب"
+email: info@career-guide.com
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+# GitHub Pages settings
+repository: ali20225/mrshd
+baseurl: ""
+url: "https://ali20225.github.io"
+
+# Arabic language support
+lang: ar
+dir: rtl
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
+
+# Social media
+social:
+  name: مرشدك المهني
+  links:
+    - https://github.com/ali20225/mrshd
+
+# Exclude from build
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - vite.config.ts
+  - ecosystem.config.cjs
+  - wrangler.jsonc
+  - src/
+  - migrations/
+  - public/
+  - .git/
+  - .gitignore
+  - CONTRIBUTING.md
+  - CHANGELOG.md
+  - UPDATES.md
+
+# Include files
+include:
+  - _config.yml
+  - index.html
+  - css/
+  - js/
+  - data/
+  - images/

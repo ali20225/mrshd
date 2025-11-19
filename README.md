@@ -4,12 +4,13 @@
 
 ![المرشد المهني](https://img.shields.io/badge/Version-1.0.0-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Cloudflare](https://img.shields.io/badge/Platform-Cloudflare%20Pages-orange)
-![Status](https://img.shields.io/badge/Status-Active-success)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-success)
+![Status](https://img.shields.io/badge/Status-Live-success)
+[![Demo](https://img.shields.io/badge/Demo-Live%20Site-blueviolet)](https://ali20225.github.io/mrshd)
 
 **نظام تفاعلي شامل لاكتشاف الميول المهنية والمواهب المتعددة للطلاب**
 
-[🚀 التجربة المباشرة](#) | [📚 الدليل الشامل](DEPLOYMENT_GUIDE.md) | [⚡ البدء السريع](QUICK_START.md)
+[🚀 التجربة المباشرة](https://ali20225.github.io/mrshd) | [📚 الدليل الشامل](DEPLOYMENT_GUIDE.md) | [⚡ البدء السريع](QUICK_START.md) | [🔧 GitHub Pages Setup](GITHUB_PAGES_SETUP.md)
 
 </div>
 
@@ -26,6 +27,16 @@
 - [الاستخدام](#-الاستخدام)
 - [المساهمة](#-المساهمة)
 - [الترخيص](#-الترخيص)
+
+---
+
+## 🌐 الوصول السريع
+
+### 🔗 الموقع المباشر على GitHub Pages
+
+**رابط الموقع**: [https://ali20225.github.io/mrshd](https://ali20225.github.io/mrshd)
+
+الموقع متاح الآن بشكل مباشر ومجاني على GitHub Pages!
 
 ---
 
