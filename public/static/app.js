@@ -254,7 +254,7 @@ function renderStart() {
         </button>
       </div>
       <div class="hidden md:block">
-        <img src="https://placehold.co/600x500/F4E7F0/6D284F?text=Explore%5CnYour%5CnFuture&font=cairo" alt="رسم توضيحي لمستقبل مهني مشرق" class="rounded-lg" />
+        <img src="https://www.genspark.ai/api/files/s/wmOEq2Et" alt="خطوتك الأولى نحو مستقبل مشرق" class="rounded-lg" />
       </div>
     </div>
     <div class="flex justify-center gap-8 mt-6 text-gray-500 py-4">
@@ -301,16 +301,19 @@ function renderAssessment() {
           <h3 class="text-lg font-semibold text-gray-900">${q.text}</h3>
           <div class="space-y-3">
             ${[
-    { value: 5, label: 'أتفق بشدة' },
-    { value: 4, label: 'أتفق' },
-    { value: 3, label: 'محايد' },
-    { value: 2, label: 'لا أتفق' },
-    { value: 1, label: 'لا أتفق بشدة' }
+    { value: 5, label: 'أتفق بشدة', emoji: '😍' },
+    { value: 4, label: 'أتفق', emoji: '😊' },
+    { value: 3, label: 'محايد', emoji: '😐' },
+    { value: 2, label: 'لا أتفق', emoji: '☹️' },
+    { value: 1, label: 'لا أتفق بشدة', emoji: '😞' }
   ].map(opt => {
     const selected = state.answers[q.id] === opt.value;
     return `<button class="opt w-full p-4 rounded-lg border-2 transition-all text-right ${selected ? 'border-[var(--brand-2)] bg-purple-50 ring-2 ring-[var(--brand-1)]' : 'border-slate-200 hover:border-[var(--brand-1)]'}" data-value="${opt.value}">
                 <div class="flex items-center justify-between">
-                  <span class="font-medium">${opt.label}</span>
+                  <div class="flex items-center gap-3">
+                    <span class="text-2xl">${opt.emoji}</span>
+                    <span class="font-medium">${opt.label}</span>
+                  </div>
                   ${selected ? '<i class="fa-solid fa-circle-check text-[var(--brand-2)]"></i>' : ''}
                 </div>
               </button>`
