@@ -195,12 +195,12 @@ const appEl = () => document.getElementById('app');
 // أدوات واجهة
 function header(progress) {
   return `
-  <header class="text-center mb-6 flex items-center justify-between no-print">
-    <div class="flex items-center gap-3">
-      <img src="https://www.genspark.ai/api/files/s/QmMkiuuw" alt="شعار مدارس النبلاء" class="h-10 w-10 object-contain" />
-      <h1 class="text-2xl md:text-3xl font-extrabold gradient-text">مرشدك المهني</h1>
+  <header class="text-center mb-8 no-print">
+    <div class="mb-6">
+      <h1 class="text-xl md:text-2xl font-bold text-gray-700 mb-1">شركة مدارس النبلاء الأهلية</h1>
+      <h2 class="text-2xl md:text-4xl font-extrabold gradient-text">المرشد المهني التفاعلي</h2>
     </div>
-    <div class="w-1/2 ${state.screen === 'start' ? 'hidden' : ''}">
+    <div class="max-w-2xl mx-auto ${state.screen === 'start' ? 'hidden' : ''}">
       <div class="bg-gray-200 rounded-full h-2.5">
         <div class="bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] h-2.5 rounded-full progress-bar-fill" style="width:${progress}%"></div>
       </div>
