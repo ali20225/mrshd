@@ -448,20 +448,69 @@ function renderReport() {
           ${note ? `<div class="mb-4 p-3 bg-yellow-50 border-r-4 border-yellow-400 text-yellow-800 rounded">${note}</div>` : ''}
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             ${uniqueMajors.length ? uniqueMajors.map((m, i) => `
-              <div class="bg-white p-3 rounded-lg border flex flex-col justify-between items-center text-center">
-                <span class="font-semibold mb-3">${m}</span>
-                <div class="flex flex-wrap justify-center gap-2 w-full">
-                  <button class="btn-mini about text-xs bg-[var(--brand-2)] text-white px-3 py-1 rounded-full hover:opacity-90 transition-colors flex-grow" data-major="${m}">نبذة</button>
-                  <button class="btn-mini paths text-xs bg-[#DDB979] text-[var(--brand-2)] px-3 py-1 rounded-full hover:opacity-90 transition-colors flex-grow" data-major="${m}">وظائف</button>
-                  <button class="btn-mini skills text-xs bg-sky-600 text-white px-3 py-1 rounded-full hover:opacity-90 transition-colors flex-grow w-full" data-major="${m}">كيف أستعد له؟</button>
+              <div class="bg-white p-4 rounded-lg border-2 border-purple-100 hover:border-purple-300 transition-all text-center shadow-sm hover:shadow-md">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 mb-3">
+                  <span class="text-2xl">📚</span>
                 </div>
+                <h4 class="font-bold text-gray-800 text-lg">${m}</h4>
               </div>`).join('') : '<p class="col-span-full text-center">لا توجد توصيات حالياً.</p>'}
           </div>
         </div>
 
-        <div class="mt-6 p-4 bg-blue-50 border-r-4 border-blue-400 text-blue-800 rounded report-section">
-          <h4 class="font-bold">ملاحظة هامة:</h4>
-          <p>هذا التقرير هو نقطة بداية إرشادية. قرار اختيار التخصص يعتمد أيضاً على قدراتك الدراسية، الفرص المتاحة، وسوق العمل.</p>
+        <div class="mt-8 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border-2 border-blue-200 report-section">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 text-white">
+              <i class="fas fa-lightbulb text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">💡 توصيات عامة لمسيرتك المهنية</h3>
+          </div>
+          
+          <div class="space-y-4 text-right">
+            <div class="bg-white p-4 rounded-lg shadow-sm border-r-4 border-purple-400">
+              <h4 class="font-bold text-purple-700 mb-2 flex items-center gap-2">
+                <span>🎯</span>
+                <span>التطوير المستمر</span>
+              </h4>
+              <p class="text-gray-700">احرص على تطوير مهاراتك باستمرار من خلال الدورات التدريبية، القراءة المتخصصة، وحضور الورش والمؤتمرات في مجال تخصصك.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border-r-4 border-blue-400">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center gap-2">
+                <span>🔍</span>
+                <span>التعمق والتخصص</span>
+              </h4>
+              <p class="text-gray-700">بعد اختيار تخصصك، ركز على مجال فرعي محدد يثير شغفك، فالتخصص العميق يميزك في سوق العمل ويفتح لك فرصاً أكبر.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border-r-4 border-green-400">
+              <h4 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <span>🤝</span>
+                <span>بناء العلاقات المهنية</span>
+              </h4>
+              <p class="text-gray-700">ابنِ شبكة علاقات مهنية قوية مع زملائك، أساتذتك، والمختصين في مجالك. التواصل المهني يفتح أبواب الفرص والتعاون.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border-r-4 border-yellow-400">
+              <h4 class="font-bold text-yellow-700 mb-2 flex items-center gap-2">
+                <span>💼</span>
+                <span>الخبرة العملية</span>
+              </h4>
+              <p class="text-gray-700">اكتسب خبرة عملية من خلال التدريب الميداني، التطوع، أو المشاريع الشخصية. الخبرة العملية تكمل التعليم الأكاديمي وتعزز فرصك الوظيفية.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border-r-4 border-pink-400">
+              <h4 class="font-bold text-pink-700 mb-2 flex items-center gap-2">
+                <span>🌟</span>
+                <span>المرونة والتكيف</span>
+              </h4>
+              <p class="text-gray-700">كن مستعداً للتكيف مع التغيرات في سوق العمل. المرونة والقدرة على التعلم السريع من أهم المهارات في العصر الحديث.</p>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-blue-100 border-r-4 border-blue-500 text-blue-900 rounded">
+            <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>تذكر:</p>
+            <p class="text-sm">هذا التقرير هو نقطة بداية إرشادية. قرار اختيار التخصص يعتمد أيضاً على قدراتك الدراسية، الفرص المتاحة، وسوق العمل المحلي.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -544,10 +593,6 @@ function attachEvents() {
         alert('تم نسخ رابط التقرير بنجاح');
       }
     };
-
-    document.querySelectorAll('.btn-mini.about').forEach(b => b.addEventListener('click', () => showModal('نبذة عن التخصص', aboutMajor(b.dataset.major))));
-    document.querySelectorAll('.btn-mini.paths').forEach(b => b.addEventListener('click', () => showModal('مسارات وظيفية', listCareers(b.dataset.major))));
-    document.querySelectorAll('.btn-mini.skills').forEach(b => b.addEventListener('click', () => showModal('كيف أستعد؟', listSkills(b.dataset.major))));
   }
 }
 
@@ -588,45 +633,6 @@ function nextQuestion() {
     state.screen = 'report';
     render();
   }
-}
-
-function aboutMajor(major) {
-  return `<p class="text-gray-700 leading-relaxed">${major}: نبذة موجزة — يتناول هذا التخصص أساسيات علمية ومهارية تؤهلك لمسارات متعددة. ستتعرف على مفاهيم رئيسية ومهارات عملية يحتاجها سوق العمل، مع فرص تدريب وتطبيقات واقعية.</p>`;
-}
-
-function listCareers(major) {
-  const items = [
-    { title: 'مسار أكاديمي/بحثي', description: `العمل في التعليم أو المختبرات وتطوير المعرفة في ${major}.` },
-    { title: 'مسار مهني تطبيقي', description: `الانضمام إلى فرق تنفيذية أو تشغيلية في مجالات مرتبطة بـ ${major}.` },
-    { title: 'مسار إداري', description: `تنسيق مشاريع وفرق عمل وتبنّي ممارسات جودة في نطاق ${major}.` },
-    { title: 'مسار ريادي', description: `إنشاء مشروع ناشئ يقدم حلولاً مبتكرة في مجال ${major}.` }
-  ];
-  return `<ul class="space-y-4 text-right">${items.map(p => `<li class="pb-2 border-b border-gray-200 last:border-0"><strong class="font-semibold text-[var(--brand-2)]">${p.title}</strong><p class="text-gray-600 mt-1">${p.description}</p></li>`).join('')}</ul>`;
-}
-
-function listSkills(major) {
-  const items = [
-    { skill: 'مشروع مصغر', description: `نفّذ مشروعًا عمليًا صغيرًا مرتبطًا بـ ${major} (أسبوعان).` },
-    { skill: 'دورة تأسيسية', description: `خذ دورة قصيرة لتعزيز مهارات أساسية يحتاجها ${major}.` },
-    { skill: 'تطوع/تظليل وظيفي', description: `شارك مع جهة تقدم خدمات قريبة من ${major} لتجربة الواقع.` }
-  ];
-  return `<ul class="space-y-4 text-right">${items.map(i => `<li class="pb-2 border-b border-gray-200 last:border-0"><strong class="font-semibold text-sky-700">${i.skill}</strong><p class="text-gray-600 mt-1">${i.description}</p></li>`).join('')}</ul>`;
-}
-
-function showModal(title, content) {
-  const overlay = document.createElement('div');
-  overlay.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 fade-in no-print';
-  overlay.addEventListener('click', () => document.body.removeChild(overlay));
-  const box = document.createElement('div');
-  box.className = 'bg-white rounded-lg shadow-xl max-w-lg w-full p-6 relative custom-card';
-  box.addEventListener('click', e => e.stopPropagation());
-  box.innerHTML = `
-    <button class="absolute top-4 left-4 text-gray-400 hover:text-gray-800 text-2xl font-bold">&times;</button>
-    <h3 class="text-2xl font-bold mb-4 text-[var(--brand-2)]">${title}</h3>
-    <div class="text-gray-700 leading-relaxed max-h-[60vh] overflow-y-auto pr-2">${content}</div>`;
-  box.querySelector('button').onclick = () => document.body.removeChild(overlay);
-  overlay.appendChild(box);
-  document.body.appendChild(overlay);
 }
 
 async function openAdmin() {
