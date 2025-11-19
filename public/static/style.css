@@ -1,1 +1,87 @@
-h1 { font-family: Arial, Helvetica, sans-serif; }
+/* أنماط عامة وإضافات للطباعة */
+:root {
+  --brand-1: #B4457F;
+  --brand-2: #6D284F;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.custom-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(109, 40, 79, .06);
+}
+
+.fade-in {
+  animation: fade .3s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progress-bar-fill {
+  transition: width .3s ease;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top-color: var(--brand-2);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RTL tweaks */
+[dir="rtl"] .border-l {
+  border-left: 1px solid #e5e7eb;
+}
+
+/* طباعة التقرير */
+@media print {
+  body * {
+    visibility: hidden;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  #report-container,
+  #report-container * {
+    visibility: visible;
+  }
+  #report-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+  .no-print,
+  .no-pdf {
+    display: none !important;
+  }
+  .report-section {
+    page-break-inside: avoid;
+  }
+}
